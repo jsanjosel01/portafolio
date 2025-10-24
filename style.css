@@ -2,6 +2,233 @@
 *{
     margin: 0;
     padding: 0;
+    /* box-sizing: border-box; */
+    
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0F0F0F; 
+  color: #FFFDFD; 
+}
+
+/* Cabecera */
+header {
+  display: flex;
+  justify-content: space-between; /* logo a la izquierda, nav a la derecha */
+  align-items: center;
+  height: 30px; 
+  padding: 20px 50px;
+  background-color: #0F0F0F; 
+}
+
+/* Logo */
+.logo img {
+  max-height: 70px; /* tamaño del logo */
+  display: block;
+}
+
+/* Navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFFDFD; /* texto blanco */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:active {
+  color: #6C4675; /* lila al hacer hover o click */
+}
+
+/*Linea gris*/
+.linea {
+  width: 100%;       
+  height: 20px;       
+  background-color: #D3D3D3;  
+  margin: 0; 
+}
+
+/* Contenido principal */
+.main-content {
+  background-color: #FFFDFD; /* fondo blanco */
+  padding: 80px 50px;
+  text-align: center;
+  min-height: 100vh; 
+}
+
+/* h1 */
+.main-content h1 {
+  color: #212224; 
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* Contenedor de proyectos */
+.projects-container {
+  display: flex;
+  justify-content: center; 
+  gap: 40px; 
+  flex-wrap: wrap; 
+}
+
+/* Cada bloque de proyecto */
+.project {
+  background-color: #E5E5E5; 
+  padding: 20px; 
+  border: 2px solid #0F0F0F; 
+  border-radius: 12px;
+  width: 220px;  /* ancho */
+  height: 220px; /* alto */
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Enlaces dentro de los bloques */
+.project a {
+  text-decoration: none;
+  color: #212224;
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+}
+
+/* icono de img
+.projects a i {
+  font-size: 100px;
+  display: flex;
+  justify-content: center; 
+  gap: 40px; 
+  flex-wrap: wrap; 
+}
+*/
+
+.project img {
+  width: 200px;       /* tamaño del ícono */
+  height: auto;
+  margin-bottom: 15px; /* espacio entre imagen y texto */
+  transition: transform 0.3s;
+}
+
+/* Efecto hover */
+.project:hover {
+  background-color: #6C4675; /* lila */
+}
+
+.project:hover a {
+  color: #FFFDFD; /* texto blanco al pasar el mouse */
+}
+
+.project-wrapper {
+  display: flex;
+  flex-direction: column; /* coloca el cuadro y el texto verticalmente */
+  align-items: center;    /* centra horizontalmente */
+  gap: 10px;              /* espacio entre cuadro y texto */
+}
+
+.project-label {
+  color: #212224;         /* color del texto */
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
 }
 
 
+/*SOBRE MI*/
+.aboutMe {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0F0F0F; 
+  color: #D3D3D3; 
+  padding: 80px 50px;
+}
+
+.about-container {
+  display: flex;            
+  align-items: center;  
+  gap: 20px;                
+}
+
+.about-container img {
+  width: 150px;             /* tamaño del logo */
+  height: auto;   
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin: 0 0 10px 0;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* BUSCADOR */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;                   
+}
+.search-button {
+  background-color: #FFFFFF;  
+  color: #6C4675;           
+  border-radius: 20px;
+  border: 1px solid #6C4675;
+  padding: 10px 130px;            /* tamaño */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  display: flex;
+  justify-content: center;     
+  align-items: center;         
+  position: relative;          /* El icono se coloca en absoluto */
+}
+
+.search-button:hover {
+  background-color: #6C4675;
+  color: #FFFFFF;
+}
+
+/* ICONO*/
+.search-button i {
+  position: absolute;
+  right: 20px;           
+  font-size: 25px;
+  color: #212224;
+}
+
+
+/*PIE DE PAG*/
+footer {
+  background-color: #6C4675; 
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-text {
+  color: #212224; 
+  font-size: 12px;
+  margin: 0;
+  
+}
+
+.github-logo img {
+  width: 30px;   
+  height: 30px; 
+  display: inline-block;
+  margin-bottom: 10px;
+}
