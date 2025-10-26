@@ -140,6 +140,7 @@ nav a:active {
   font-weight: bold;
   font-size: 18px;
   text-align: center;
+  
 }
 
 
@@ -231,4 +232,64 @@ footer {
   height: 30px; 
   display: inline-block;
   margin-bottom: 10px;
+}
+
+
+
+/*  HAMBURGUESA */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  background-color: #FFFDFD; 
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; 
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #0F0F0F;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    display: none; /* oculto por defecto */
+    gap: 15px;
+  }
+
+  .nav-links.active {
+    display: flex; /* se muestra al hacer clic */
+  }
+
+  /* Animación una cruz */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
 }
