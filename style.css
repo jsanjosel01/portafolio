@@ -147,7 +147,9 @@ nav a:active {
 /*SOBRE MI*/
 .aboutMe {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;  
   background-color: #0F0F0F; 
   color: #D3D3D3; 
   padding: 80px 50px;
@@ -290,5 +292,32 @@ footer {
   }
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+
+/*Responsive*/
+@media (max-width: 480px) {
+  .aboutMe {
+    padding: 40px 20px;  /* reduce padding para móviles */
+  }
+
+  .about-container {
+    flex-direction: column; /* imagen arriba, texto abajo */
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about-container img {
+    width: 100px;       /* tamaño más pequeño para pantallas pequeñas */
+    max-width: 50%;     /* no ocupe demasiado */
+  }
+
+  .about-text h3 {
+    font-size: 28px;    /* ajustar tamaño del título */
+  }
+
+  .about-text p {
+    font-size: 16px;    /* ajustar tamaño del texto */
   }
 }
